@@ -16,7 +16,7 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
 fi
 
 echo "Cloning into ${GITHUB_REPOSITORY}"
-git clone "git@github.com:cryptopirates/${INPUT_REPOSITORYNAME}.git"
+git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
 cd "${INPUT_REPOSITORYNAME}"
 
 echo "Getting dependencies"
