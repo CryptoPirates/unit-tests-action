@@ -1,4 +1,4 @@
-apk --update --upgrade add git
+# apk --update --upgrade add git
 
 export GOPRIVATE=github.com/cryptopirates
 
