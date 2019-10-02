@@ -1,9 +1,5 @@
 #!/bin/sh -l
 
-apk --update --upgrade add git build-base coreutils \
-  --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
-  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main
-
 export GOPRIVATE=github.com/cryptopirates
 
 echo "Configuring git"
