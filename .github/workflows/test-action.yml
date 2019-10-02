@@ -10,4 +10,4 @@ jobs:
         repositoryName: api
         username: ${{ secrets.CP_USER }}
         accessToken: ${{ secrets.CP_ACCESS_TOKEN }}
-        requiresTALib: false
+        requiresTALib: true

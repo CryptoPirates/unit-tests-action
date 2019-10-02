@@ -1,6 +1,8 @@
 #!/bin/sh -l
 
-apk --update --upgrade add git
+apk --update --upgrade add git build-base coreutils \
+  --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
+  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main
 
 export GOPRIVATE=github.com/cryptopirates
 
@@ -15,7 +17,6 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
     sudo make install
 fi
 
-echo "Cloning into ${GITHUB_REPOSITORY}"
 git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
 cd "${INPUT_REPOSITORYNAME}"
 
