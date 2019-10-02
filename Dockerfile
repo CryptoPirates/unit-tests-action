@@ -1,3 +1,3 @@
-FROM golang:1.13-alpine as builder
+FROM alpine/git
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
