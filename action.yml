@@ -1,23 +1,20 @@
 name: 'Enable Private Repositories'
-description: Enable private GitHub repositories for the CryptoPirates team in Actions.
+description: Run Go unit tests on CryptoPirates private repositories.
 author: Colin Campbell
 inputs:
   repositoryName:
     description: The name of the repository.
     required: true
-  username:
+  gitHubUsername:
     description: A GitHub user's username.
     required: true
-  accessToken:
-    description: GitHub user's personal access token.
+  gitHubAccessToken:
+    description: A GitHub user's personal access token.
     required: true
   requiresTALib:
     description: Whether or not the package requires the use of TA-Lib.
     required: false
     default: false
-branding:
-  color: 'blue'
-  icon: 'unlock'
 runs:
   using: 'docker'
   image: 'Dockerfile'
