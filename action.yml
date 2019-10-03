@@ -21,3 +21,5 @@ branding:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    testUser: "hello!"
