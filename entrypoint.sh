@@ -5,7 +5,8 @@ export GOPRIVATE=github.com/cryptopirates
 echo "Configuring git"
 git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
-if [ "${INPUT_REQUIRESTALIB}" == "true" ] then
+if [ $INPUT_REQUIRESTALIB == "true" ]
+then
     echo "Installing TA-Lib"
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
@@ -14,7 +15,7 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ] then
 fi
 
 git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
-cd "${INPUT_REPOSITORYNAME}"
+cd $INPUT_REPOSITORYNAME
 
 echo "Getting dependencies"
 go get -v -t -d ./...
