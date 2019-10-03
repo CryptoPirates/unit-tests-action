@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: cryptopirates/unit-tests-action@master
       with:
-        repositoryName: api
+        repositoryName: unit-tests-action
         username: ${{ secrets.CP_USER }}
         accessToken: ${{ secrets.CP_ACCESS_TOKEN }}
         requiresTALib: true
