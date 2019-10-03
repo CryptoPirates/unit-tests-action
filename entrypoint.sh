@@ -10,7 +10,7 @@ if [ $INPUT_REQUIRESTALIB = "true" ]; then
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
     git checkout gh-actions-alpine-latest
-    sudo make install
+    make install
 fi
 
 git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
