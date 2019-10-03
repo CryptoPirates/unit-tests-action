@@ -2,12 +2,12 @@
 
 export GOPRIVATE=github.com/cryptopirates
 
-echo "Configuring git"
+echo "Configuring git ${TESTUSER}"
 git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
 if [ $INPUT_REQUIRESTALIB = "true" ]; then
     echo "Installing TA-Lib"
-    git clone 
+    git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
     git checkout gh-actions-alpine-latest
     sudo make install
