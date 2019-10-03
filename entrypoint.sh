@@ -3,18 +3,21 @@
 export GOPRIVATE=github.com/cryptopirates
 
 echo "Configuring git"
-echo "argument 1" $0
-echo "argument 2" $1
+git config --global user.email "colinc86@gmail.com"
+git config --global user.name "Colin Campbell"
 git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
 if [ $INPUT_REQUIRESTALIB = "true" ]; then
     echo "Installing TA-Lib"
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
-    # git checkout gh-actions-alpine-latest
+    git checkout -b "gh-actions-buster-latest"
     ./configure --prefix=/usr
     make
-    make install
+    git add .
+    git commit -m "Buster image binaries."
+    git push --set-upstream origin gh-actions-buster-latest
+    # make install
 fi
 
 git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
