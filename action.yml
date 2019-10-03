@@ -21,5 +21,6 @@ branding:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    testUser: "hello!"
+  args:
+    - "hello!"
+    - ${{ secrets.CP_USER }}
