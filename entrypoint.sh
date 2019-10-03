@@ -2,7 +2,6 @@
 
 export GOPRIVATE=github.com/cryptopirates
 
-echo "${TESTUSER}"
 echo "Configuring git"
 git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
@@ -22,5 +21,3 @@ go get -v -t -d ./...
 
 echo "Running tests"
 go test -v
-
-exit 0
