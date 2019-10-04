@@ -13,8 +13,12 @@ if [ $INPUT_REQUIRESTALIB = "true" ]; then
     make install
 fi
 
-git clone "https://github.com/cryptopirates/${INPUT_REPOSITORYNAME}.git"
+git clone "https://github.com/${1}.git"
 cd $INPUT_REPOSITORYNAME
+
+IFS=';' read -ra ADDR <<< "${GITHUB_REPOSITORY}"
+IDX=${#ADDR[@]}-1
+cd "${ADDR[${IDX}]}"
 
 echo "Getting dependencies"
 go get -v -t -d ./...

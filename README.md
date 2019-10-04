@@ -5,10 +5,6 @@ This action enables cloning private Cryptopirates repositories, installing TA-Li
 
 ## Inputs
 
-### `repositoryName`
-
-**Required** The name of the repository to clone.
-
 ### `gitHubUsername`
 
 **Required** The username of a GitHub user with the correct access rights.
@@ -26,7 +22,6 @@ Whether or not the package depends on TA-Lib.
 ```yaml
 uses: cryptopirates/unit-tests-action@master
 with:
-    repositoryName: unit-tests-action
     username: ${{ secrets.CP_USER }}
     accessToken: ${{ secrets.CP_ACCESS_TOKEN }}
     requiresTALib: true

@@ -2,9 +2,6 @@ name: 'Enable Private Repositories'
 description: Run Go unit tests on CryptoPirates private repositories.
 author: Colin Campbell
 inputs:
-  repositoryName:
-    description: The name of the repository.
-    required: true
   gitHubUsername:
     description: A GitHub user's username.
     required: true
