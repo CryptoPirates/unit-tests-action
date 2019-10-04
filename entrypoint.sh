@@ -15,7 +15,8 @@ fi
 
 git clone "https://github.com/${GITHUB_REPOSITORY}.git"
 
-IFS=';' read -ra ADDR <<< "${GITHUB_REPOSITORY}"
+IFS='/'
+read -ra ADDR <<< "${GITHUB_REPOSITORY}"
 IDX=${#ADDR[@]}-1
 cd "${ADDR[${IDX}]}"
 
