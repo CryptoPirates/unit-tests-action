@@ -13,8 +13,7 @@ if [ $INPUT_REQUIRESTALIB = "true" ]; then
     make install
 fi
 
-git clone "https://github.com/${1}.git"
-cd $INPUT_REPOSITORYNAME
+git clone "https://github.com/${GITHUB_REPOSITORY}.git"
 
 IFS=';' read -ra ADDR <<< "${GITHUB_REPOSITORY}"
 IDX=${#ADDR[@]}-1
