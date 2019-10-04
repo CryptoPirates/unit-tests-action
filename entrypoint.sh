@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 export GOPRIVATE=github.com/cryptopirates
 
 echo "Configuring git"
 git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
-if [ $INPUT_REQUIRESTALIB = "true" ]; then
+if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
     echo "Installing TA-Lib"
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
