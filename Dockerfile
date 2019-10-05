@@ -1,4 +1,6 @@
-FROM golang:1.13-buster as builder
+FROM golang:1.13-alpine as builder
+
+RUN apk add --update bash git
 
 COPY entrypoint.sh /entrypoint.sh
 
