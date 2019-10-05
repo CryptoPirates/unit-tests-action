@@ -12,6 +12,10 @@ inputs:
     description: Whether or not the package requires the use of TA-Lib.
     required: false
     default: false
+  requiresLibrdkafka:
+    descriptions: Whether or not the package requires the use of librdkafka.
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

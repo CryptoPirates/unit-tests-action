@@ -1,2 +1,4 @@
+github.com/confluentinc/confluent-kafka-go v1.1.0 h1:HIW7Nkm8IeKRotC34mGY06DwQMf9Mp9PZMyqDxid2wI=
+github.com/confluentinc/confluent-kafka-go v1.1.0/go.mod h1:u2zNLny2xq+5rWeTQjFHbDzzNuba4P1vo31r9r4uAdg=
 github.com/cryptopirates/gotalib v0.0.0-20191004042244-cd289e851062 h1:JKIs8eumn/iydWcBSelx6baVz4pnXLje1VWJ+zHo9Uw=
 github.com/cryptopirates/gotalib v0.0.0-20191004042244-cd289e851062/go.mod h1:OTuSC89sVM+ibOT8zPfo49Ew7Wu8HtIi43gkVqidmV0=

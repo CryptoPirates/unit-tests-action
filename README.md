@@ -17,6 +17,10 @@ This action enables cloning private Cryptopirates repositories, installing TA-Li
 
 Whether or not the package depends on TA-Lib.
 
+### `requiresLibrdkafka`
+
+Whether or not the package depends on librdkafka.
+
 ## Example usage
 
 ```yaml
@@ -25,4 +29,5 @@ with:
     gitUsername: ${{ secrets.GIT_USERNAME }}
     gitAccessToken: ${{ secrets.GIT_ACCESS_TOKEN }}
     requiresTALib: true
+    requiresLibrdkafka: true
 ```
