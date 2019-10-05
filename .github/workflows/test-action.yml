@@ -6,6 +6,6 @@ jobs:
     steps:
     - uses: cryptopirates/unit-tests-action@master
       with:
-        username: ${{ secrets.CP_USER }}
-        accessToken: ${{ secrets.CP_ACCESS_TOKEN }}
+        gitUsername: ${{ secrets.GIT_USERNAME }}
+        gitAccessToken: ${{ secrets.GIT_ACCESS_TOKEN }}
         requiresTALib: true

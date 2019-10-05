@@ -3,7 +3,7 @@
 export GOPRIVATE=github.com/cryptopirates
 
 echo "Configuring git"
-git config --global url."https://${INPUT_USERNAME}:${INPUT_ACCESSTOKEN}@github.com".insteadOf "https://github.com"
+git config --global url."https://${INPUT_GITUSERNAME}:${INPUT_GITACCESSTOKEN}@github.com".insteadOf "https://github.com"
 
 if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
     echo "Installing TA-Lib"
