@@ -11,12 +11,12 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
     echo "Installing TA-Lib"
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
-    git checkout gh-actions-alpine-latest
+    git checkout -b gh-actions-alpine2-latest
     ./configure
     make
     git add .
     git commit -m "Update build binaries."
-    git push
+    git push --set-upstream origin gh-actions-alpine2-latest
     # make install
     cd ..
 fi
