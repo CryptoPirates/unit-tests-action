@@ -3,7 +3,7 @@ package unittestsaction
 import (
 	"fmt"
 
-	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/confluentinc/confluent-kafka-go-dev/kafka"
 	"github.com/cryptopirates/gotalib"
 )
 

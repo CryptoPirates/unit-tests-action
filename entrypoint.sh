@@ -15,8 +15,8 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
 fi
 
 if [ "${INPUT_REQUIRESLIBRDKAFKA}" == "true" ]; then
-    echo "Installing librdkafka"
-    apk --update --upgrade add librdkafka
+    echo "Installing librdkafka-dev"
+    apk --update --upgrade add librdkafka-dev
 fi
 
 git clone "https://github.com/${GITHUB_REPOSITORY}.git"
