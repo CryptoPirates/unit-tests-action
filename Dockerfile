@@ -1,4 +1,6 @@
-FROM docker.pkg.github.com/cryptopirates/ta-lib/golang-talib-kafka:1.0
+FROM golang:1.13-alpine as builder
+
+RUN apk add --update bash git build-base coreutils
 
 COPY entrypoint.sh /entrypoint.sh
 
