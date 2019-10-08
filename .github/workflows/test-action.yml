@@ -4,6 +4,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      
+    - name: Git configuration
+      run: git config --global url."https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_ACCESS_TOKEN }}@github.com".insteadOf "https://github.com"
+
     - name: Unit Tests
       uses: cryptopirates/unit-tests-action@master
       with:
