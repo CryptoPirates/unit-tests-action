@@ -1,4 +1,6 @@
-FROM gcr.io/kube-cluster-217003/golang-talib-rdkafka:latest
+FROM golang:1.13-alpine
+
+RUN apk add --update bash git build-base coreutils
 
 COPY entrypoint.sh /entrypoint.sh
 
