@@ -15,12 +15,12 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
 fi
 
 if [ "${INPUT_REQUIRESLIBRDKAFKA}" == "true" ]; then
-    echo "Installing librdkafka-dev"
+    echo "Installing librdkafka"
     git clone https://github.com/edenhill/librdkafka.git
     cd librdkafka
-    ./configure --install-deps
+    ./configure --install-deps --prefix /usr
     make
-    sudo make install
+    make install
     cd ..
 fi
 
