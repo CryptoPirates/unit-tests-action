@@ -16,9 +16,12 @@ fi
 
 if [ "${INPUT_REQUIRESLIBRDKAFKA}" == "true" ]; then
     echo "Installing librdkafka-dev"
-    apk --update --upgrade add librdkafka-dev \
-        --repository http://dl-3.alpinelinux.org/alpine/edge/community/ \
-        --repository http://dl-cdn.alpinelinux.org/alpine/edge/main
+    git clone https://github.com/edenhill/librdkafka.git
+    cd librdkafka
+    ./configure --install-deps
+    make
+    sudo make install
+    cd ..
 fi
 
 git clone "https://github.com/${GITHUB_REPOSITORY}.git"
