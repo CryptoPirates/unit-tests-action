@@ -1,4 +1,4 @@
-FROM docker.pkg.github.com/cryptopirates/bpc-base-image/bpc-base:0.1.0
+FROM colinc86/bpc-base:latest
 
 RUN apk add --update bash git build-base coreutils
 
