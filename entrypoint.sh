@@ -9,7 +9,8 @@ if [ "${INPUT_REQUIRESTALIB}" == "true" ]; then
     echo "Installing TA-Lib"
     git clone https://github.com/cryptopirates/ta-lib.git
     cd ta-lib
-    git checkout gh-actions-alpine2-latest
+    ./configure --prefix=/usr LDFLAGS="-lm"
+    make
     make install
     cd ..
 fi
