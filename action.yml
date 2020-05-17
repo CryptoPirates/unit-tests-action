@@ -8,6 +8,9 @@ inputs:
   gitAccessToken:
     description: A GitHub user's personal access token.
     required: true
+  gitBranch:
+    description: A GIT branch.
+    required: true
   requiresTALib:
     description: Whether or not the package requires the use of TA-Lib.
     required: false

@@ -12,6 +12,8 @@ read -ra ADDR <<< "${GITHUB_REPOSITORY}"
 IDX=${#ADDR[@]}-1
 cd "${ADDR[${IDX}]}"
 
+git checkout "${INPUT_GITBRANCH}"
+
 echo "Getting dependencies"
 go get -v -t -d -tags dynamic ./...
 
